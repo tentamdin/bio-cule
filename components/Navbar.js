@@ -68,33 +68,31 @@ export const Navbar = () => {
                     <img className="cursor-pointer" src="image/bag.png" alt="bag" />
                 </div>
                 {/* // here goes all the menu for large screen */}
-                <div className="hidden md:w-full md:grid grid-cols-2">
-                    <div className="grid grid-cols-3 col-span-full">
-                        <ul className="text-lg font-bold py-3 cursor-pointer">Skin Type
-                            {skinType.map((element) =>
-                                <li className="font-normal text-sm py-3 cursor-pointer">{element}</li>
-                            )}
-                        </ul>
-                        <ul className="text-lg font-bold py-3 cursor-pointer">Skin Type
-                            {skinGoal.map((element) =>
-                                <li className="font-normal text-sm py-3 cursor-pointer">{element}</li>
-                            )}
-                        </ul>   <ul className="text-lg font-bold py-3 cursor-pointer">Skin Type
-                            {productType.map((element) =>
-                                <li className="font-normal text-sm py-3 cursor-pointer">{element}</li>
-                            )}
-                            <div className="flex justify-between w-max space-x-2 align-middle items-center border-b-2 border-black">
-                                <a href="#" className="text-sm font-bold">
-                                    All Products
-                                </a>
-                                <img src="image/arrow.png" />
-                            </div>
+                <div className="grid grid-cols-3">
+                    <ul className="text-lg font-bold py-3 cursor-pointer">Skin Type
+                        {skinType.map((element) =>
+                            <li className="font-normal text-sm py-3 cursor-pointer">{element}</li>
+                        )}
+                    </ul>
+                    <ul className="text-lg font-bold py-3 cursor-pointer">Skin Type
+                        {skinGoal.map((element) =>
+                            <li className="font-normal text-sm py-3 cursor-pointer">{element}</li>
+                        )}
+                    </ul>   <ul className="text-lg font-bold py-3 cursor-pointer">Skin Type
+                        {productType.map((element) =>
+                            <li className="font-normal text-sm py-3 cursor-pointer">{element}</li>
+                        )}
+                        <div className="flex justify-between w-max space-x-2 align-middle items-center border-b-2 border-black">
+                            <a href="#" className="text-sm font-bold">
+                                All Products
+                            </a>
+                            <img src="image/arrow.png" />
+                        </div>
 
-                        </ul>
-                    </div>
-                    <div className="bg-local ">
-                        <img src="" />
-                    </div>
+                    </ul>
+                </div>
+                <div className="flex justify-end">
+                    <img src="image/Frame.png" />
                 </div>
 
             </nav>
