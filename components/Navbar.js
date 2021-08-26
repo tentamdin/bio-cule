@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 const skinType = [
     "Skin Type",
@@ -28,11 +28,19 @@ const productType = [
 ]
 
 export const Navbar = () => {
+
+    const handleMenu = () => {
+        console.log("dfkjvndfkj")
+        const sidebar = document.querySelector(".sidebar")
+        sidebar.classList.toggle("-translate-x-full")
+
+    };
+
     return (
         <div>
             <nav className="navbar relative w-full md:grid md:grid-cols-2 pt-6 md:pt-8 px-4 md:px-16 space-y-4 bg-white md:hover:border-b-2 border-gray-200">
                 <div className="md:hidden flex justify-between items-center align-middle">
-                    <img className="md:hidden cursor-pointer" src="image/menu.png" alt="menu" />
+                    <img onClick={handleMenu} className="md:hidden cursor-pointer" src="image/menu.png" alt="menu" />
                     <h1 className="text-2xl text-center font-bold cursor-pointer">bio:cule</h1>
                     <div className="flex space-x-6">
                         <img className="cursor-pointer inline-block" src="image/search.png" alt="search" />
@@ -68,7 +76,7 @@ export const Navbar = () => {
                     <img className="cursor-pointer" src="image/bag.png" alt="bag" />
                 </div>
                 {/* // here goes all the menu for large screen */}
-                <div className="grid grid-cols-3">
+                <div className="hidden md:grid grid-cols-3">
                     <ul className="text-lg font-bold py-3 cursor-pointer">Skin Type
                         {skinType.map((element) =>
                             <li className="font-normal text-sm py-3 cursor-pointer">{element}</li>
@@ -91,14 +99,14 @@ export const Navbar = () => {
 
                     </ul>
                 </div>
-                <div className="flex justify-end">
+                <div className="hidden md:flex justify-end">
                     <img src="image/Frame.png" />
                 </div>
 
             </nav>
 
             {/* here goes all the menu for small screen */}
-            <div className="md:hidden flex pt-4 px-4 flex-col w-64 bg-#FFFEF4 absolute inset-y-0 left-0  transform -translate-x-full " >
+            <div className="sidebar md:hidden flex pt-4 px-4 flex-col w-80 bg-red-200 absolute inset-y-0 left-0  transform -translate-x-full" >
                 <div className="border-b border-gray-700">
                     <h1 className="text-2xl py-4 font-bold cursor-pointer">bio:cule</h1>
                     <a href="#" className="flex align-middle items-center space-x-2 py-2.5">
